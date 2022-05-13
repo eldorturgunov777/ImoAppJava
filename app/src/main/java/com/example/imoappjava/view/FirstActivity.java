@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 import com.example.imoappjava.adapter.VPAdapter;
 import com.example.imoappjava.fragment.FirstFragment;
+import com.example.imoappjava.fragment.SecondFragment;
 import com.example.imoappjava.model.ListData;
 import com.example.imoappjava.R;
 import com.example.imoappjava.adapter.MyAdapter;
@@ -32,8 +33,8 @@ public class FirstActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
         tabLayout.setupWithViewPager(viewPager);
         VPAdapter adapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        adapter.addFragment(new FirstFragment(), "Chats");
         adapter.addFragment(new FirstFragment(), "Calls");
+        adapter.addFragment(new SecondFragment(), "Contacts");
         viewPager.setAdapter(adapter);
 
     }
